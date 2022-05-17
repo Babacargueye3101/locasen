@@ -1,4 +1,6 @@
+import { LoginComponent } from './pages/login/login.component';
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  opened=false;
   title = 'locasen';
+  constructor(public dialog:MatDialog){
+
+  }
+  onpenLogin(){
+    this.dialog.open(LoginComponent)
+  }
 }

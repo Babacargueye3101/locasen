@@ -1,3 +1,24 @@
-<app-navbar></app-navbar>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<mat-toolbar class="fixed-top">
+  <mat-toolbar-row>
+    <mat-icon (click)="opened=!opened" style="cursor: pointer; color: white;" *ngIf="!opened">menu</mat-icon>
+    <mat-icon (click)="opened=!opened" style="cursor: pointer; color: white;" *ngIf="opened">close</mat-icon>
+    <button mat-raised-button class="login" (click)="onpenLogin()">Sign In</button>
+    <button mat-raised-button>Sign Up</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav [(opened)]="opened">
+   <mat-nav-list dense>
+       <a mat-list-item href=""><p>Accueil</p></a>
+       <a mat-list-item routerLink="/footer"><p>Stage</p></a>
+       <a mat-list-item href=""><p>Information</p></a>
+       <a mat-list-item href=""><p>Découvertes</p></a>
+       <a mat-list-item href=""><p>A propos</p></a>
+   </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

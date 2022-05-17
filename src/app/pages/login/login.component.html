@@ -1,0 +1,19 @@
+<div class="signin row">
+   <div class="col-md-12 text-center">
+     <img src="../../../assets/taftaf.png" width="300px" height="300px" alt="">
+   </div>
+</div>
+<div class="row">
+  <p style="color: red;">{{message}}</p>
+</div>
+<div class="row">
+  <mat-form-field class="example-full-width" appearance="outline" >
+    <mat-label>E-mail</mat-label>
+    <input matInput placeholder="Ex. taftaf@gmail.com" [(ngModel)]="login">
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="outline" >
+    <mat-label>Password</mat-label>
+    <input matInput placeholder="Password" type="password"  [(ngModel)]="password">
+  </mat-form-field>
+  <button mat-button class="example-full-width" (click)="signIn()">Sign In</button>
+</div>
