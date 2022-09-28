@@ -20,9 +20,6 @@ export class LoginComponent implements OnInit {
     this.logservice.signIn(this.login,this.password)
     this.message=this.logservice.message
   }
-  public signup(){
-    this.logservice.signup(this.login,this.password)
-    this.message=this.logservice.message
-  }
+
 
 }

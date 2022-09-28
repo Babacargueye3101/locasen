@@ -3,7 +3,7 @@
     <mat-icon (click)="opened=!opened" style="cursor: pointer; color: white;" *ngIf="!opened">menu</mat-icon>
     <mat-icon (click)="opened=!opened" style="cursor: pointer; color: white;" *ngIf="opened">close</mat-icon>
     <button mat-raised-button class="login" (click)="onpenLogin()">Sign In</button>
-    <button mat-raised-button>Sign Up</button>
+    <button mat-raised-button class="signup" (click)="signup()">Sign Up</button>
   </mat-toolbar-row>
 </mat-toolbar>
 <mat-sidenav-container>

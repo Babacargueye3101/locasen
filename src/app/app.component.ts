@@ -1,6 +1,7 @@
 import { LoginComponent } from './pages/login/login.component';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { SignupComponent } from './pages/signup/signup.component';
 
 @Component({
   selector: 'app-root',
@@ -15,5 +16,8 @@ export class AppComponent {
   }
   onpenLogin(){
     this.dialog.open(LoginComponent)
+  }
+  signup(){
+    this.dialog.open(SignupComponent)
   }
 }

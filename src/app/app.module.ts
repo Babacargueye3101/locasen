@@ -1,3 +1,4 @@
+import { SignupComponent } from './pages/signup/signup.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { LoginserviceService } from './service/loginservice.service';
 import { environment } from './../environments/environment';
@@ -22,7 +23,8 @@ import { AngularFireModule } from '@angular/fire/compat';
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
